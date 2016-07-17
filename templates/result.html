@@ -1,0 +1,14 @@
+{% if result %}
+<h1>Win army: {{ result }}</h1>
+<div>
+    {% if battle %}
+    <p>You enter: </p>
+    <p>Armies number: {{ battle['arm_num'] }}</p>
+    <p>Strategy: {{ battle['strategy'] }}</p>
+    <p>Squads number: {{ battle['squad'] }}</p>
+    <p>Solders: {{ battle['sold'] }}</p>
+    <p>Vehicles: {{ battle['vehic'] }}</p>
+    <a href="/index">Try again...</a>
+    {% endif %}
+</div>
+{% endif %}

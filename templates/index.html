@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battle</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripts/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+</head>
+<body>
+    <h1>Form for battle</h1>
+    <form method="POST" id="start_battle">
+        <p id="errors"></p>
+        <label for="arm_num">Armies number</label><br>
+        <input type="text" name="arm_num" /><br>
+        <label for="strat">Strategy</label><br>
+        <select name="strat">
+            <option>random</option>
+            <option>weakest</option>
+            <option>strongest</option>
+        </select><br>
+        <label for="squad">Squads number</label><br>
+        <input type="text" name="squad" /><br>
+        <label for="sold">Units number (soldiers and vehicles) 5 to 10</label><br>
+        <input type="text" name="sold" placeholder="solders" /><br>
+        <input type="text" name="vehic" placeholder="vehicles" /><br>
+        <!--<input type="submit" value="Start">-->
+        <button>Start</button>
+    </form>
+</body>
+</html>
