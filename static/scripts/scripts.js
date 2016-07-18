@@ -3,6 +3,12 @@
 //ready
 $(document).ready(function(){
 
+    $('input[type="text"]').bind( "change keyup input click" , function() {
+        if(this.value.match(/[^0-9]/g)){
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+
     $("#start_battle button").bind( "click" , function(e) {
         e.preventDefault();
         var arm_num = $("#start_battle input[name='arm_num']").val(),

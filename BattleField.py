@@ -32,13 +32,12 @@ class BattleField:
                     for j in target:
                         i.attack(j, self.__strategy)
                         j.attack(i, self.__strategy)
-                        if i.get_health() <= 0:
-                            armies.remove(i)
-                        elif j.get_health() <= 0:
+                        if j.get_health() <= 0:
                             armies.remove(j)
                             target.remove(j)
+                    if i.get_health() <= 0:
+                        armies.remove(i)
                     if len(armies) == 1:
                         win = armies[0].get_name()
                         break
         return win
-
